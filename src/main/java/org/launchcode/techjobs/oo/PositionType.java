@@ -1,38 +1,17 @@
 package org.launchcode.techjobs.oo;
 
-public class PositionType {
+// We are defining a new class called 'PositionType' which extends the 'JobField' class.
+// This means that 'PositionType' inherits all the fields and methods from 'JobField.'
+public class PositionType extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
 
-    public PositionType() {
-        id = nextId;
-        nextId++;
-    }
+    // This is the constructor for the 'PositionType' class.
+    // It takes a 'value' argument, which is passed to the constructor of the parent class 'JobField' using 'super(value)'.
+
 
     public PositionType(String value) {
-        this();
-        this.value = value;
+        super(value); // Calls the constructor of the 'JobField' class with the 'value' argument
     }
 
-    // TODO: Add a custom toString() method that returns the data stored in 'value'.
-
-    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
-    //  their id fields match.
-
-    // Getters and Setters:
-
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
+    // Additional methods specific to PositionType, if needed.
 }

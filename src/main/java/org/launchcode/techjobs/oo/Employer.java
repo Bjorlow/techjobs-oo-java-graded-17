@@ -1,55 +1,16 @@
+// We are defining a new class called 'Employer' which extends the 'JobField' class.
+// This means that 'Employer' inherits all the fields and methods from 'JobField.'
+
 package org.launchcode.techjobs.oo;
 
-import java.util.Objects;
-
-public class Employer {
-
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public Employer() {
-        id = nextId;
-        nextId++;
-    }
+// This is the constructor for the 'Employer' class.
+// It takes a 'value' argument, which is passed to the constructor of the parent class 'JobField' using 'super(value)'.
+public class Employer extends JobField {
 
     public Employer(String value) {
-        this();
-        this.value = value;
+        super(value); // Calls the constructor of the 'JobField' class with the 'value' argument.
+
     }
 
-    // Custom toString, equals, and hashCode methods:
-
-    @Override
-    public String toString() {
-        return value;
-    }
-
-    @Override
-    public boolean equals(Object o) {  // Two objects are equal if they have the same id.
-        if (this == o) return true;
-        if (!(o instanceof Employer)) return false;
-        Employer employer = (Employer) o;
-        return getId() == employer.getId();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
-
-    // Getters and Setters:
-
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
+    // Additional methods specific to Employer, if needed.
 }
