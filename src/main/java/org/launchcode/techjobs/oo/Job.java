@@ -105,4 +105,6 @@ public class Job {
 
         return System.lineSeparator() + idString + nameString + employerString + locationString + positionTypeString + coreCompetencyString;
     }
+
+    //instances here
 }
